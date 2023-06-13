@@ -1,0 +1,13 @@
+{% extends 'extend.html' %}
+{% block body %}
+<div class="container">
+<h3> Details</h3>
+{{ celebs.name}}<br>
+Age : {{ celebs.age}}<br>
+<img src="{{celebs.image.url}}" width="300"><br>
+{{celebs.info}}
+    <br>
+    <a href="delete/" >Delete</a>
+    <a href="update/" >Update</a>
+</div>
+{% endblock %}

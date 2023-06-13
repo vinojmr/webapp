@@ -1,0 +1,31 @@
+{% extends 'extend.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            {% for i in celeb %}
+            <div class="card" style="width: 18rem; background-color:White">
+                <img class="card-img-top" src="{{i.image.url}}" alt="Card image cap" style="width:287px; height:250px">
+                <div class="card-body" >
+                    <h5 class="card-title">Celebrities</h5>
+                <div class="card-text"><a href ="celeb/">Celebrity</a></div>
+                 </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div  class="row">
+        <div class="col-md-6">
+            <div class="card" style="width: 18rem; background-color:white">
+                {% for i in actor %}
+                <img class="card-img-top" src="{{i.image.url}}" alt="Card image cap" style="width:287px; height:250px">
+                {% endfor %}
+                <div class="card-body" >
+                    <h5 class="card-title">Actors</h5>
+                    <div class="card-text"><a href="actors" style="color:w">Actors</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'extend.html' %}
+{% block body %}
+<div class="container">
+    <h4>Actors</h4>
+    <div class="row">
+
+        {% for i in actor %}
+        <div class="col-md-6">
+            <div class="card" style="width: 31rem; background-color:grey">
+                <img class="card-img-top" src="{{i.image.url}}" alt="Card image cap" style="width:487px; height:500px">
+                    <div class="card-body " >
+                        <h5 class="card-title">{{i.name}}</h5>
+                        <p class="card-text">{{i.year}}</p>
+                        <a href="{% url 'details2' i.id %}" style="color: white">More..</a><br>
+                    </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <a href="{% url 'add2' %}">Add</a>
+</div>
+{% endblock %}

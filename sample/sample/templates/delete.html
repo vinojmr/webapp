@@ -1,0 +1,6 @@
+{% extends 'extend.html' %}
+<form method="POST">
+    {% csrf_token %}
+    Do u want to delete this?
+    <input type="submit">
+</form>

@@ -1,0 +1,13 @@
+{% extends 'extend.html' %}
+{% block body %}
+
+<h4> Add a Actor</h4>
+<form  method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="Actor Name">
+    <input type="text" name="age" placeholder="Actor Age">
+    <input type="text" name="about" placeholder="Tell us about them">
+    <input type="file" name="image">
+    <input type="submit" value="Add">
+</form>
+{% endblock %}

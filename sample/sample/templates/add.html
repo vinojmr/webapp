@@ -1,0 +1,14 @@
+{% extends 'extend.html' %}
+{% block body %}
+<div class="container">
+<h4> Add a Celebrity</h4>
+<form  method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="Celebrity Name">
+    <input type="text" name="age" placeholder="Celebrity Age">
+    <input type="text" name="info" placeholder="Tell us about them">
+    <input type="file" name="image">
+    <input type="submit" value="Add">
+</form>
+</div>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'extend.html' %}
+{% block body %}
+<div class="container">
+<h2>{{actors.name}}</h2><br>
+Age : {{actors.age}}<br>
+<img src ="{{actors.image.url}}"><br>
+{{actors.about}}<br>
+<a href="update2/">Update</a>
+</div>
+{% endblock %}
